@@ -156,6 +156,7 @@ class TriPeaksGUI(object):
         if self.game.hasWon():
             self.game.isPlaying = False
             self.hasWon = True
+            self.sweetVictSound.play()
             
         elif self.game.hasLost():
             self.game.isPlaying = False
@@ -191,7 +192,10 @@ class TriPeaksGUI(object):
         self.cardSound = pygame.mixer.Sound("card2.wav")
         self.sweepSound = pygame.mixer.Sound("sweep.wav")
         self.sadLoseSound = pygame.mixer.Sound("sadLose.wav")
-
+        self.sweetVictSound = pygame.mixer.Sound("rocky.wav")
+        self.AmbientSound = pygame.mixer.Sound("woods.wav")
+        self.cardShuffle = pygame.mixer.Sound("shuffle.wav")
+        
         self.backgroundImg = pygame.image.load('woodBackground.jpg')
 
 
